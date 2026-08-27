@@ -333,18 +333,10 @@ function qrPlaza(){
   box(0,-0.15,0, N*tile+4, 0.25, N*tile+4, 0xe9e2d5, {shadow:false});
 }
 
+qrPlaza();
 
 const RED=0xB3402A, REDD=0x8a2a1a, CREAM=0xF5EFE6, BRICK=0x8a5a3a, BRICKD=0x6a4028,
       GREEN=0x1A7A3A, GLASS=0xffd9a0, DARK=0x2a1810, WHITE=0xf8f4ec, GRAY=0x6a6a6a, WOOD=0x9a6a3a;
-
-(function(){
-  const N=qr.size, tile=0.8, off=-N*tile/2;
-  for(let r=0;r<N;r++) for(let c=0;c<N;c++){
-    const on = qr.matrix[r][c]===1;
-    box(off+c*tile+tile/2, 0.05, off+r*tile+tile/2, tile*0.96,0.1,tile*0.96, on?0x141414:0xf2ede4, {shadow:false});
-  }
-  box(0,-0.15,0, N*tile+4, 0.25, N*tile+4, 0xe9e2d5, {shadow:false});
-})();
 
 const W=11, D=9, H1=6, H2=6;
 brick(0, 0.2, 0, W, D, H1, BRICK);
@@ -357,31 +349,6 @@ brick(0, H1+H2+0.1, D/2+0.2, W+1.2, 0.3, 0.9, CREAM, {studs:false});
 brick(0, H1+H2-2.4, D/2+0.4, W*0.9, 3.0, 0.5, RED, {studs:false});
 box(0, H1+H2-2.4, D/2+0.42, W*0.9-0.4, 2.6, 0.56, 0xd88a6a, {shadow:false});
 
-const F5 = {
- 'P':["1111","1001","1111","1000","1000","1000","1000"],
- 'A':["0110","1001","1001","1111","1001","1001","1001"],
- 'T':["11111","00100","00100","00100","00100","00100","00100"],
- "'":["010","010","000","000","000","000","000"],
- 'S':["0111","1000","1000","0110","0001","0001","1110"],
- 'I':["111","010","010","010","010","010","111"],
- 'Z':["1111","0001","0010","0100","1000","1000","1111"],
- ' ':[]
-};
-function drawName(text, y, z, scale, color, depth){
-  // compute total width
-  let total = 0;
-  for(const ch of text){ const g=F5[ch]; total += (g && g[0]? g[0].length : (ch==="'"?2:0)) * scale + scale; }
-  let cx = -total/2;
-  for(const ch of text){
-    const g = F5[ch];
-    if(!g || !g[0]){ cx += 2*scale; continue; }
-    const gw = g[0].length;
-    for(let r=0;r<g.length;r++) for(let c=0;c<gw;c++){
-      if(g[r][c]==='1') box(cx+c*scale, y+(g.length-1-r)*scale, z, scale*0.94, scale*0.94, depth, color, {mat:{emissive:color, emissiveIntensity:0.2}});
-    }
-    cx += (gw+1)*scale;
-  }
-}
 drawName("PAT'S", H1+H2-4.0, D/2+0.55, 0.5, WHITE, 0.8);
 brick(0, H1+H2-5.4, D/2+0.4, W*0.5, 1.1, 0.45, CREAM, {studs:false});
 drawName("APIZZA", H1+H2-6.5, D/2+0.55, 0.3, RED, 0.5);
