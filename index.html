@@ -408,10 +408,21 @@ function cafeSet(x, z, accent){
   const P=accent||0xB3402A;
   [[0,0],[-0.55,0],[0.55,0],[0,-0.55],[0,0.55]].forEach(p=>box(x+p[0], 3.0, z+p[1], 0.6, 0.14, 0.6, P));
 }
+
+// subtle ground shadow under props — dark plane, no depth write
+function groundShadow(x, z, w, d) {
+  box(x, 0.02, z, w, 0.04, d, 0x0a0a0a, {shadow: false, opacity: 0.4});
+}
+
 // street lamp with glow
 function lampPost(x, z){
   box(x, 1.5, z, 0.18, 3.0, 0.18, 0x2a2a2a);
   box(x, 3.15, z, 0.5, 0.35, 0.5, 0xffd9a0, {shadow:false});
+}
+
+// Subtle ground shadow under props (dark, flat, no shadow casting)
+function groundShadow(x, z, w, d) {
+  box(x, 0.02, z, w, 0.04, d, 0x1a1a1a, {shadow: false});
 }
 
 
@@ -420,6 +431,12 @@ const RED=0xC33A22, REDD=0x8a2a1a, CREAM=0xF5EFE6, BRICK=0x9a6242, BRICKD=0x7a4a
       GREEN=0x2f6a3a, GLASSW=0xffc966, DARK=0x2a1810, WHITE=0xf8f4ec, GOLD=0xd8a03a;
 
 qrPlaza();
+
+// Ground shadow helper
+function groundShadow(x, z, w, d) {
+  box(x, 0.08, z, w, 0.06, d, 0x0a0a0a, {shadow:false});
+}
+
 
 // ---- proportions from reference: W=14, D=10, H=12 total ----
 const W=14, D=10, H=12;
@@ -543,8 +560,11 @@ box(0, 3.6, -D/2-0.28, 3.4, 0.8, 0.18, RED);
 
 // ===== STREET LIFE — deliberate placement =====
 planter(-W/2-1.5, D/2-0.8, REDD, 0x2f7a3a);
+groundShadow(-W/2-1.5, D/2-0.8, 1.2, 1.2);
 planter( W/2+1.5, D/2-0.8, REDD, 0x2f7a3a);
+groundShadow(W/2+1.5, D/2-0.8, 1.2, 1.2);
 cafeSet(-W/2-3.5, 1.5, RED);
+groundShadow(-W/2-3.5, 1.5, 2.0, 2.0);
 cafeSet(-W/2-3.8, 5.5, RED);
 minifig(-W/2-3.5, 0.5, RED, 0x2a3a5a);
 minifig(-W/2-4.8, 5.7, 0x2f7a3a, 0x3a3a3a);
