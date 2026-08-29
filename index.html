@@ -168,14 +168,14 @@ body{background:#FBF6EE;color:#23120B;font-family:Archivo,sans-serif;-webkit-fon
 </div></section><section class="slide" data-label="Your Business, Scannable" style="position:relative;background:#140b06">
  <div id="voxel-pats" style="position:absolute;inset:0"></div>
  <div style="position:absolute;top:36px;left:48px;z-index:10;pointer-events:none">
-   <div class="kick2" style="color:#c33a22">Your business, in 3D — and one scan away</div>
-   <div style="font-family:Fraunces,serif;font-size:clamp(26px,3.4vw,46px);line-height:1.05;color:#F5EFE6;max-width:560px">This is you. <em style="color:#c33a22">Drag it.</em> The ground is a code your next customer can scan to reach us.</div>
+   <div class="kick2" style="color:#b63225">Your business, in 3D — and one scan away</div>
+   <div style="font-family:Fraunces,serif;font-size:clamp(26px,3.4vw,46px);line-height:1.05;color:#F5EFE6;max-width:560px">This is you. <em style="color:#b63225">Drag it.</em> The ground is a code your next customer can scan to reach us.</div>
  </div>
  <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:13px;letter-spacing:.12em;color:rgba(245,239,230,.6);z-index:10;pointer-events:none">DRAG TO ORBIT · THE GROUND IS A SCANNABLE CODE</div>
  <script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
  <script>(function(){
    var built=false;
-   var CFG = {"bg": 1313542, "accent": 12794402, "theta": 0.3, "phi": 0.78, "radius": 38, "target": {"x": 0, "y": 4, "z": 2}, "qr": {"url": "https://vastlyresilient.github.io/seolution-book/?ref=pats-apizza", "size": 37, "matrix": [[1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1], [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0], [1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1], [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1], [0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1], [0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1], [1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0], [1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0], [0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1], [0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1], [0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0], [0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0], [1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1], [1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1], [1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0], [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1]]}};
+   var CFG = {"bg": 1313542, "accent": 11940389, "theta": 0.3, "phi": 0.85, "radius": 38, "target": {"x": -0.5, "y": 4.35, "z": 0.5}, "qr": {"url": "https://vastlyresilient.github.io/seolution-book/?ref=pats-apizza", "size": 37, "matrix": [[1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1], [1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1], [1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0], [1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1], [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1], [0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0], [0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1], [0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1], [1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0], [1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0], [0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1], [0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0], [0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0], [1, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1], [0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0], [0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0], [1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1], [1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1], [1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0], [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0], [1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1], [1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1], [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1], [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1]]}, "rimColor": 14239535, "rimIntensity": 0.72, "exposure": 1.05, "bounceIntensity": 1.25};
    function build(){
      var mount=document.getElementById('voxel-pats');
      if(!mount) return;
@@ -184,88 +184,118 @@ body{background:#FBF6EE;color:#23120B;font-family:Archivo,sans-serif;-webkit-fon
      if(built){ if(mount.__forceResize) mount.__forceResize(); return; }
      built=true;
      const THREE = window.THREE;
-// ---------- LEGO BRICK HELPERS ----------
+
 function buildVoxelScene(mount, cfg){
-  const scene = new THREE.Scene();
-  scene.background = new THREE.Color(cfg.bg);
-  const camera = new THREE.PerspectiveCamera(40, mount.clientWidth/mount.clientHeight, 0.1, 400);
-  const renderer = new THREE.WebGLRenderer({antialias:true, preserveDrawingBuffer:true});
-  renderer.setSize(mount.clientWidth, mount.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
-  renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  // ===== RENDERER BASELINE (remediation spec section 2) =====
+  const renderer = new THREE.WebGLRenderer({antialias:true, alpha:false});
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = cfg.exposure || 1.05;
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.setSize(mount.clientWidth, mount.clientHeight, false);
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
   mount.appendChild(renderer.domElement);
 
-  // ---- LIGHTS (warm, premium) ----
-  scene.add(new THREE.HemisphereLight(0xfff0dd, 0x1a0f08, 0.55));
-  const key = new THREE.DirectionalLight(0xffe6c0, 1.5); key.position.set(20,32,16);
-  key.castShadow=true; key.shadow.mapSize.set(2048,2048);
-  key.shadow.camera.left=-30; key.shadow.camera.right=30; key.shadow.camera.top=30; key.shadow.camera.bottom=-30;
-  key.shadow.bias=-0.0004; scene.add(key);
-  const rim = new THREE.DirectionalLight(cfg.accent, 0.5); rim.position.set(-16,12,-18); scene.add(rim);
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(cfg.bg || 0x0e0e12);
 
-  // ---- MATERIAL CACHE ----
-  const mats = {};
-  function mat(c, o={}){ const k=c+'|'+JSON.stringify(o); if(!mats[k]){ mats[k]=new THREE.MeshStandardMaterial(Object.assign({color:c, roughness:0.55, metalness:0.02}, o)); } return mats[k]; }
-
-  // ---- LEGO BRICK: box + stud(s) on top ----
-  const geoBox = new THREE.BoxGeometry(1,1,1);
-  const geoStud = new THREE.CylinderGeometry(0.34,0.34,0.2,16);
-  const world = new THREE.Group(); scene.add(world);
-  function brick(x,y,z, w,d,h, color, opts={}){
-    // Micro-voxel: clean planar faces, NO studs. w,d,h in world units.
-    const g = new THREE.Group();
-    const body = new THREE.Mesh(geoBox, mat(color, opts.mat||{}));
-    body.scale.set(w, h, d); body.castShadow=true; body.receiveShadow=true;
-    g.add(body);
-    g.position.set(x, y+h/2, z);
-    world.add(g);
-    return g;
-  }  // plain box (for interior/details, no studs)
-  function box(x,y,z, w,h,d, color, opts={}){
-    const m = new THREE.Mesh(geoBox, mat(color, opts.mat||{}));
-    m.scale.set(w,h,d); m.position.set(x,y,z);
-    m.castShadow = opts.shadow!==false; m.receiveShadow=true; world.add(m); return m;
-  }
-
-  window.__world = world; window.__brick = brick; window.__box = box; window.__mat = mat;
-  window.__scene = scene; window.__camera = camera; window.__renderer = renderer;
-  window.__cfg = cfg;
-  if(cfg.build) cfg.build({brick, box, mat, world, scene, camera, cfg});
-
-  // ---- CAMERA ORBIT ----
-  const orbit = { theta: cfg.theta!==undefined?cfg.theta:0.62, phi: cfg.phi!==undefined?cfg.phi:0.62, radius: cfg.radius||34, dragging:false, lx:0, ly:0 };
-  const target = cfg.target||{x:0,y:5,z:0};
+  const camera = new THREE.PerspectiveCamera(32, mount.clientWidth/mount.clientHeight, 0.1, 1000);
+  const orbit = {theta:cfg.theta||0.55, phi:cfg.phi||0.9, radius:cfg.radius||34};
+  const target = new THREE.Vector3(cfg.target?.x||0, cfg.target?.y||4, cfg.target?.z||2);
   function upd(){
-    orbit.phi = Math.max(0.12, Math.min(1.5, orbit.phi));
-    orbit.radius = Math.max(14, Math.min(60, orbit.radius));
     camera.position.set(
       target.x + orbit.radius*Math.sin(orbit.phi)*Math.sin(orbit.theta),
       target.y + orbit.radius*Math.cos(orbit.phi),
-      target.z + orbit.radius*Math.sin(orbit.phi)*Math.cos(orbit.theta));
-    camera.lookAt(target.x,target.y,target.z);
+      target.z + orbit.radius*Math.sin(orbit.phi)*Math.cos(orbit.theta)
+    );
+    camera.lookAt(target);
   }
-  const dom = renderer.domElement; dom.style.cursor='grab';
-  dom.addEventListener('pointerdown',e=>{orbit.dragging=true;orbit.lx=e.clientX;orbit.ly=e.clientY;dom.style.cursor='grabbing';});
-  window.addEventListener('pointermove',e=>{ if(!orbit.dragging)return; orbit.theta-=(e.clientX-orbit.lx)*0.006; orbit.phi-=(e.clientY-orbit.ly)*0.006; orbit.lx=e.clientX; orbit.ly=e.clientY; });
-  window.addEventListener('pointerup',()=>{orbit.dragging=false;dom.style.cursor='grab';});
-  dom.addEventListener('wheel',e=>{e.preventDefault();orbit.radius+=e.deltaY*0.02;},{passive:false});
   upd();
-  window.__setView=(t,p,r)=>{orbit.theta=t;orbit.phi=p;if(r)orbit.radius=r;upd();};
 
-  function loop(){ requestAnimationFrame(loop); upd(); renderer.render(scene,camera); }
-  loop();
-  function resize(){ const w=mount.clientWidth||mount.parentElement.clientWidth||800, h=mount.clientHeight||mount.parentElement.clientHeight||600; camera.aspect=w/h; camera.updateProjectionMatrix(); renderer.setSize(w,h); }
-  window.__export4K = function(theta, phi, radius){
-    if(theta!==undefined){ orbit.theta=theta; orbit.phi=phi; if(radius)orbit.radius=radius; upd(); }
-    const W=3840, H=2160;
-    camera.aspect = W/H; camera.updateProjectionMatrix();
-    renderer.setSize(W,H);
-    renderer.render(scene,camera);
-    const url = renderer.domElement.toDataURL('image/png');
-    resize(); // restore
-    return url;
-  };
-  window.addEventListener('resize', resize); mount.__forceResize=resize; resize();
+  // Lighting baseline per spec
+  const hemi = new THREE.HemisphereLight(0xC9DAEC, 0x1A1512, 0.32); scene.add(hemi);
+  const key = new THREE.DirectionalLight(cfg.keyColor||0xE8F1FF, cfg.keyIntensity||2.20);
+  key.position.set(18,26,20); key.castShadow = true;
+  key.shadow.mapSize.set(4096,4096);
+  key.shadow.camera.left=-26; key.shadow.camera.right=26;
+  key.shadow.camera.top=26; key.shadow.camera.bottom=-26;
+  key.shadow.camera.near=0.5; key.shadow.camera.far=80;
+  key.shadow.bias=-0.00015; key.shadow.normalBias=0.03; key.shadow.radius=3;
+  scene.add(key);
+  const fill = new THREE.DirectionalLight(0xC6D7F2, 0.48); fill.position.set(-16,12,10); scene.add(fill);
+  const rim = new THREE.DirectionalLight(cfg.rimColor||0xE8F1FF, cfg.rimIntensity||0.85); rim.position.set(-14,16,-20); scene.add(rim);
+  const bounce = new THREE.RectAreaLight(0xFFD7AA, cfg.bounceIntensity||1.25, 18, 10);
+  bounce.position.set(0,5,12); bounce.lookAt(0,3,0); scene.add(bounce);
+
+  const world = new THREE.Group(); scene.add(world);
+  const geoBox = new THREE.BoxGeometry(1,1,1);
+
+  const matCache = new Map();
+  function mat(color, opts){
+    const key = color + JSON.stringify(opts||{});
+    if(matCache.has(key)) return matCache.get(key);
+    const m = new THREE.MeshStandardMaterial({
+      color: color,
+      roughness: opts?.roughness ?? 0.82,
+      metalness: opts?.metalness ?? 0,
+      emissive: opts?.emissive ?? 0x000000,
+      emissiveIntensity: opts?.emissiveIntensity ?? 0,
+      transparent: opts?.transparent ?? false,
+      opacity: opts?.opacity ?? 1,
+    });
+    matCache.set(key, m);
+    return m;
+  }
+
+  function box(x,y,z, w,h,d, color, opts){
+    const m = new THREE.Mesh(geoBox, mat(color, opts?.mat||{}));
+    m.position.set(x,y,z); m.scale.set(w,h,d);
+    m.castShadow = opts?.shadow !== false;
+    m.receiveShadow = true;
+    world.add(m);
+    return m;
+  }
+  function brick(x,y,z, w,d,h, color, opts){
+    return box(x, y+h/2, z, w, h, d, color, opts);
+  }
+
+  cfg.build({brick, box, mat, world, cfg, scene, camera, renderer});
+
+  function resize(){
+    const w = mount.clientWidth, h = mount.clientHeight;
+    camera.aspect = w/h; camera.updateProjectionMatrix();
+    renderer.setSize(w, h, false);
+  }
+  new ResizeObserver(resize).observe(mount);
+  mount.__forceResize = resize;
+
+  let dragging = false, px = 0, py = 0;
+  mount.addEventListener('pointerdown', e => { dragging = true; px = e.clientX; py = e.clientY; mount.setPointerCapture(e.pointerId); });
+  mount.addEventListener('pointermove', e => {
+    if(!dragging) return;
+    orbit.theta -= (e.clientX - px) * 0.005;
+    orbit.phi = Math.max(0.1, Math.min(Math.PI-0.1, orbit.phi + (e.clientY - py) * 0.005));
+    px = e.clientX; py = e.clientY; upd();
+  });
+  mount.addEventListener('pointerup', () => dragging = false);
+  mount.addEventListener('wheel', e => {
+    orbit.radius = Math.max(10, Math.min(100, orbit.radius + e.deltaY * 0.05)); upd();
+  });
+
+  function animate(){
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.__world = world;
+  window.__scene = scene;
+  window.__camera = camera;
+  window.__renderer = renderer;
+  window.__cfg = cfg;
+  window.__setView = function(t,p,r){ orbit.theta=t; orbit.phi=p; if(r) orbit.radius=r; upd(); };
+  window.__ready = true;
 }
 
      CFG.build = function(ctx){ var brick=ctx.brick, box=ctx.box, mat=ctx.mat, world=ctx.world, cfg=ctx.cfg; var qr=cfg.qr;
@@ -332,12 +362,40 @@ function qrPlaza(){
 }
 
 // Micro-brick facade — dense small tiles with tone variation
+
+// ===== NORMAL-BASED SURFACE BUILDER (remediation spec section 1) =====
+function buildSurface(origin, normal, uAxis, vAxis, width, height, module, color, openings, opts){
+  opts = opts || {};
+  const nx = Math.max(1, Math.round(width/module)), ny = Math.max(1, Math.round(height/module));
+  const ow = width/nx, oh = height/ny;
+  for(let i=0;i<nx;i++) for(let j=0;j<ny;j++){
+    const lu = -width/2 + (i+0.5)*ow;
+    const lv = -height/2 + (j+0.5)*oh;
+    let skip = false;
+    if(openings) for(const op of openings){
+      if(Math.abs(lu - op.u) < op.w/2 && Math.abs(lv - op.v) < op.h/2){ skip = true; break; }
+    }
+    if(skip) continue;
+    const tone = opts.toneVar === true ? ((i+j)%3===0 ? color : (i+j)%3===1 ? shade(color,0.9) : shade(color,1.1)) : color;
+    const px = origin[0] + uAxis[0]*lu + vAxis[0]*lv + normal[0]*(opts.layerOffset||0);
+    const py = origin[1] + uAxis[1]*lu + vAxis[1]*lv + normal[1]*(opts.layerOffset||0);
+    const pz = origin[2] + uAxis[2]*lu + vAxis[2]*lv + normal[2]*(opts.layerOffset||0);
+    const dims = [
+      Math.abs(uAxis[0])>0.5 ? ow : (Math.abs(vAxis[0])>0.5 ? oh : (opts.depth||0.15)),
+      Math.abs(uAxis[1])>0.5 ? ow : (Math.abs(vAxis[1])>0.5 ? oh : (opts.depth||0.15)),
+      Math.abs(uAxis[2])>0.5 ? ow : (Math.abs(vAxis[2])>0.5 ? oh : (opts.depth||0.15))
+    ];
+    box(px, py, pz, dims[0]*0.92, dims[1]*0.92, dims[2]*0.92, tone, {shadow:false});
+  }
+}
+
+// microBrickFace — FIXED: side faces now use cx for X coordinate, vary along Z
 function microBrickFace(cx, cy, cz, w, h, color, face){
   const tile=0.5, nx=Math.ceil(w/tile), ny=Math.ceil(h/tile);
   for(let i=0;i<nx;i++) for(let j=0;j<ny;j++){
     const tone = (i+j)%3===0 ? color : (i+j)%3===1 ? shade(color,0.9) : shade(color,1.1);
     const px = cx - w/2 + (i+0.5)*tile, py = cy - h/2 + (j+0.5)*tile;
-    if(face==='sideR') box(cz, py, -px, 0.15, tile*0.92, tile*0.92, tone, {shadow:false});
+    if(face==='sideR' || face==='sideL') box(cx, py, cz - w/2 + (i+0.5)*tile, 0.15, tile*0.92, tile*0.92, tone, {shadow:false});
     else box(px, py, cz, tile*0.92, tile*0.92, 0.15, tone, {shadow:false});
   }
 }
@@ -444,47 +502,101 @@ function shade(col, f){
 }
 
 
-// ===== PAT'S APIZZA — MICRO-VOXEL ARCHITECTURAL DIORAMA =====
-const RED=0xC33A22, REDD=0x8a2a1a, CREAM=0xF5EFE6, BRICK=0x9a6242, BRICKD=0x7a4a30,
-      GREEN=0x2f6a3a, GLASSW=0xffc966, DARK=0x2a1810, WHITE=0xf8f4ec, GOLD=0xd8a03a;
+// ===== PAT'S APIZZA — CRAFT + CONVENIENCE PAVILION (remediation spec §3) =====
+// Unique silhouette: main volume + pickup wing + raised sign parapet + pizza-oven exhaust
+// NOT the same box as other companies
 
-qrPlaza();
+const RED=0xB63225, REDD=0x8a2a1a, CREAM=0xF6F0E5, IVORY=0xD9D0C2, BRICK=0x5a1f14,
+      DARK=0x1a1a1a, GLASS=0x0, GOLD=0xD7A23A, WHITE=0xf8f4ec, GREEN=0x2f6a3a;
 
-// ---- Single-story with parapet — micro-voxel density ----
-const W=14, D=10, H=8;
+// ===== QR GROUND (0.45-unit tiles per spec §7) =====
+{
+  const N=qr.size, tile=0.45, off=-N*tile/2;
+  for(let r=0;r<N;r++) for(let c=0;c<N;c++){
+    const on = qr.matrix[r][c]===1;
+    box(off+c*tile+tile/2, 0.04, off+r*tile+tile/2, tile*0.96,0.08,tile*0.96, on?0x171717:0xE7E1D5, {shadow:false});
+  }
+  // Perimeter frame
+  box(0, 0.12, 0, N*tile+1.2, 0.24, N*tile+1.2, 0xD6CEC0, {shadow:false});
+  box(0, 0.02, 0, N*tile+1.4, 0.04, N*tile+1.4, 0xD9D2C6, {shadow:false});
+}
 
-// Foundation course
-brick(0, 0.15, 0, W, D, 0.3, 0x6a4a3a);
+// ===== GROUND: sidewalk + curb + road (connected, not floating) =====
+// Sidewalk slab: X=-9.0..8.5, Z=5.70..8.80
+brick(-0.25, 0, 7.25, 17.5, 3.1, 0.22, 0xC7BBA8);
+// Curb at Z=9.05
+brick(0, 0.22, 9.05, 18.5, 0.30, 0.28, 0x9a9a9a);
+// Road at Z=9.20+
+brick(0, 0, 10.5, 20, 3.0, 0.10, 0x3a3a3a);
+// Patio zone: X=-11.75..-8.60, Z=1.00..7.60
+brick(-10.175, 0, 4.3, 3.15, 6.6, 0.22, 0xC7BBA8);
 
-// Main walls — dense micro-brick texture on all faces
-microBrickFace(0, H/2+0.15, D/2+0.05, W, H-0.3, BRICK, 'front');
-microBrickFace(0, H/2+0.15, -D/2-0.05, W, H-0.3, BRICKD, 'front');
-microBrickFace(W/2+0.05, H/2+0.15, 0, D, H-0.3, BRICKD, 'sideR');
-microBrickFace(-W/2-0.05, H/2+0.15, 0, D, H-0.3, BRICKD, 'sideR');
+// ===== MAIN VOLUME =====
+// center (-1.50, 0, 0), size 13.00 W x 11.00 D x 7.25 H
+const MW=13.0, MD=11.0, MH=7.25, MX=-1.50;
+// Facade mix: 55% ivory, 20% brick, 18% red, 7% dark trim
+// Front facade: Z0=+5.50
+// Material-skin outer face: +0.20 → Z=5.70
+// Glass plane: -0.20 → Z=5.30
+// Frame outer face: +0.45 → Z=5.95
+// Sign-panel outer face: +0.70 → Z=6.20
+// Letter outer face: +1.00 → Z=6.50
 
-// Interior core (invisible from outside)
-brick(0, 0.3, 0, W-0.4, D-0.4, H-0.6, 0x3a2a1a);
+// Structural shell (absent inside openings)
+// Front: buildSurface with openings for windows + door
+const frontOpenings = [
+  {u:-5.15, v:2.60, w:3.90, h:3.85},  // prep window
+  {u:-0.70, v:2.60, w:3.80, h:3.85},  // oven window
+  {u:2.25, v:2.10, w:1.70, h:3.75},   // entrance
+];
+// Ivory panels (55%)
+buildSurface([MX, MH/2+0.11, 5.50], [0,0,1], [1,0,0], [0,1,0], MW, MH, 0.5, BRICK, frontOpenings, {depth:0.15, toneVar:false});
+// Brick accents (20%) — lower left and right corners
+buildSurface([MX-MW/2+1.0, MH/2+0.11, 5.50], [0,0,1], [1,0,0], [0,1,0], 2.0, MH, 0.5, IVORY, frontOpenings, {depth:0.15, toneVar:false});
+buildSurface([MX+MW/2-1.0, MH/2+0.11, 5.50], [0,0,1], [1,0,0], [0,1,0], 2.0, MH, 0.5, IVORY, frontOpenings, {depth:0.15, toneVar:false});
+// Red painted metal accents (18%) — around sign area
+buildSurface([MX, 6.5, 5.50], [0,0,1], [1,0,0], [0,1,0], MW*0.6, 1.5, 0.5, RED, frontOpenings, {depth:0.15, toneVar:false});
+// Dark trim (7%) — base course
+buildSurface([MX, 0.35, 5.50], [0,0,1], [1,0,0], [0,1,0], MW, 0.7, 0.5, DARK, frontOpenings, {depth:0.15, toneVar:false});
 
-// Parapet — stepped, with coping
-brick(0, H+0.1, 0, W+0.4, D+0.4, 0.5, 0x2a2a2a);
-brick(0, H+0.5, 0, W+0.2, D+0.2, 0.3, 0x1a1a1a);
+// Rear facade: Z0=-5.50
+buildSurface([MX, MH/2+0.11, -5.50], [0,0,-1], [-1,0,0], [0,1,0], MW, MH, 0.5, IVORY, null, {depth:0.15, toneVar:false});
+// Left facade: X0=-8.00
+buildSurface([MX-MW/2, MH/2+0.11, 0], [-1,0,0], [0,0,1], [0,1,0], MD, MH, 0.5, BRICK, null, {depth:0.15, toneVar:false});
+// Right facade: X0=5.00
+buildSurface([MX+MW/2, MH/2+0.11, 0], [1,0,0], [0,0,-1], [0,1,0], MD, MH, 0.5, IVORY, null, {depth:0.15, toneVar:false});
 
-// Roof details — chimney, HVAC, skylight, vent
-brick(-W/2+2, H+0.9, -D/2+2, 1.2, 1.0, 1.8, BRICKD);
-box(W/2-2.5, H+0.8, -D/2+2.5, 1.0, 0.7, 1.2, 0x9aa0a6);
-box(W/2-2.5, H+1.4, -D/2+2.5, 0.8, 0.2, 1.0, 0x7a8087);
-box(-1, H+0.75, -D/2+3, 1.8, 0.25, 1.2, 0xbfe3ff, {shadow:false});
-box(W/2-4, H+0.8, D/2-1.5, 0.8, 0.5, 0.8, 0x6a6a6a);
+// Interior floor/ceiling/back (no full-volume core)
+brick(MX, 0.11, 0, MW-0.3, MD-0.3, 0.22, 0x3a2a1a);  // floor
+brick(MX, MH-0.11, 0, MW-0.3, MD-0.3, 0.22, 0x2a1a10); // ceiling
+brick(MX, MH/2+0.11, -MD/2+0.3, MW-0.3, 0.6, MH-0.6, 0x4a3526); // back wall (partial, not full volume)
 
-// ===== SIGN BAND — painted fascia, integrated =====
-// Band is part of the facade, not floating
-box(0, H-2.2, D/2+0.15, W*0.9, 2.0, 0.3, RED);
-box(0, H-2.2, D/2+0.18, W*0.9-0.2, 1.7, 0.32, REDD, {shadow:false});
-// PAT'S — small, painted, micro-voxel
-drawName("PAT'S", H-2.8, D/2+0.35, 0.28, WHITE, 0.25);
-// APIZZA below
-drawName("APIZZA", H-3.2, D/2+0.35, 0.12, GOLD, 0.2);
-// Pizza slice glyph — small, right side
+// ===== PICKUP WING =====
+// center (5.75, 0, 0.75), size 4.00 W x 7.50 D x 5.75 H, overlaps main by 0.50
+const PW=4.00, PD=7.50, PH=5.75, PX=5.75, PZ=0.75;
+// Wing front: Z0=+4.50
+buildSurface([PX, PH/2+0.11, 4.50], [0,0,1], [1,0,0], [0,1,0], PW, PH, 0.5, IVORY, [
+  {u:0, v:2.25, w:2.70, h:3.20},  // pickup portal
+], {depth:0.15, toneVar:false});
+// Wing sides
+buildSurface([PX-PW/2, PH/2+0.11, PZ], [-1,0,0], [0,0,1], [0,1,0], PD, PH, 0.5, BRICK, null, {depth:0.15, toneVar:false});
+buildSurface([PX+PW/2, PH/2+0.11, PZ], [1,0,0], [0,0,-1], [0,1,0], PD, PH, 0.5, IVORY, null, {depth:0.15, toneVar:false});
+// Wing floor/ceiling
+brick(PX, 0.11, PZ, PW-0.3, PD-0.3, 0.22, 0x3a2a1a);
+brick(PX, PH-0.11, PZ, PW-0.3, PD-0.3, 0.22, 0x2a1a10);
+
+// ===== RAISED SIGN PARAPET =====
+// center (-1.50, 8.25, 0.20), size 10.50 W x 2.00 H x 1.00 D
+brick(MX, MH+0.11, 0.20, 10.50, 1.00, 2.00, 0x4a3020);
+// Sign cabinet: center (-1.50, 8.25, 5.85), 10.50 W x 2.00 H x 0.35 D
+box(MX, 8.25, 5.85, 10.50, 2.00, 0.35, RED);
+// Dark inset border
+box(MX, 8.25, 5.83, 10.10, 1.80, 0.37, 0x2a1a10, {shadow:false});
+// PAT'S letters: center (-2.15, 8.48, 6.35), cap height 1.15, cream
+drawName("PAT'S", 7.33, 6.35, 0.164, CREAM, 0.25);
+// APIZZA: center (-2.15, 7.52, 6.35), cap height 0.42, gold
+drawName("APIZZA", 7.10, 6.35, 0.06, GOLD, 0.20);
+// Pizza-slice relief: center (2.90, 8.23, 6.42), bounding 2.20 W x 1.65 H x 0.35 D
 const SLICE=[
  "....#....",
  "...###...",
@@ -495,80 +607,132 @@ const SLICE=[
  "#########",
  "ccccccccc",
 ];
-paintGlyph(SLICE, 4.2, H-2.2, D/2+0.32, 0.18, {'#':0xf2c14e,'o':0xc0392b,'c':0xc98a3d}, 'front');
+paintGlyph(SLICE, 2.90, 8.23, 6.42, 0.16, {'#':0xf2c14e,'o':0xc0392b,'c':0xc98a3d}, 'front');
 
-// ===== AWNING — stepped, striped, micro-voxel =====
-awningStripes(0, H-4.0, D/2, W*0.8, 2.2, RED, CREAM);
+// ===== PIZZA-OVEN EXHAUST =====
+// center (-5.55, -3.65), shaft 1.10 x 1.10, from Y=7.25 to 10.25, cap 1.45 x 1.45 x 0.25
+brick(-5.55, MH+0.11, -3.65, 1.10, 1.10, 3.00, BRICK);
+box(-5.55, 10.25+0.125, -3.65, 1.45, 0.25, 1.45, DARK);
 
-// ===== STOREFRONT — warm, detailed interior =====
-// Left window: counter + pizza boxes + lamp
-box(-3.0, 1.8, D/2+0.1, 3.2, 3.0, 0.12, GLASSW, {shadow:false});
-box(-3.0, 0.9, D/2-0.4, 2.4, 0.7, 0.5, 0x5a3a26, {shadow:false});
-box(-3.8, 1.5, D/2-0.4, 0.5, 0.4, 0.35, 0xe9e2d5, {shadow:false});
-box(-2.2, 1.6, D/2-0.4, 0.4, 0.5, 0.3, 0xc0392b, {shadow:false});
-// Mullions
-box(-3.0, 1.8, D/2+0.16, 3.4, 0.12, 0.08, DARK, {shadow:false});
-box(-3.0, 1.8, D/2+0.16, 0.12, 3.1, 0.08, DARK, {shadow:false});
-box(-3.0, 0.25, D/2+0.2, 3.4, 0.2, 0.4, CREAM);
+// ===== ROOF DETAILS =====
+// Main roof Y=7.25, pickup roof Y=5.75
+// 0.25 u parapet, 0.15 u metal cap
+brick(MX, MH+0.11, 0, MW+0.4, MD+0.4, 0.25, 0x2a1a10);
+box(MX, MH+0.36+0.075, 0, MW+0.4, 0.15, MD+0.4, 0x5a4a3a);
+// HVAC: (2.25, -2.70) size 1.60 x 1.20 x 0.80
+box(2.25, MH+0.36+0.40, -2.70, 1.60, 0.80, 1.20, 0x9aa0a6);
+// Roof hatch: (0.00, -3.40) size 1.20 x 1.00
+box(0.00, MH+0.36+0.50, -3.40, 1.20, 0.10, 1.00, 0x7a8087);
+// Pickup wing roof
+brick(PX, PH+0.11, PZ, PW+0.3, PD+0.3, 0.25, 0x2a1a10);
+box(PX, PH+0.36+0.075, PZ, PW+0.3, 0.15, PD+0.3, 0x5a4a3a);
 
-// Right window: coal oven with fire
-box(3.2, 1.8, D/2+0.1, 2.8, 3.0, 0.12, GLASSW, {shadow:false});
-box(3.2, 1.2, D/2-0.4, 1.6, 1.4, 0.4, 0x4a2a1a, {shadow:false});
-box(3.2, 1.1, D/2-0.2, 0.9, 0.8, 0.25, 0xe86a2a, {shadow:false});
-box(3.2, 1.05, D/2-0.1, 0.5, 0.4, 0.15, 0xffd166, {shadow:false});
-box(3.2, 1.8, D/2+0.16, 3.0, 0.12, 0.08, DARK, {shadow:false});
-box(3.2, 1.8, D/2+0.16, 0.12, 3.1, 0.08, DARK, {shadow:false});
-box(3.2, 0.25, D/2+0.2, 3.0, 0.2, 0.4, CREAM);
+// ===== STOREFRONT: 5-layer interior depth =====
+// Prep window: center (-5.15, 2.60), opening 3.90 W x 3.85 H
+// Layer A (glass/reveal): Z=5.30 (glass), Z=5.05-5.15 (reveal)
+// Glass: transparent
+box(-5.15, 2.60, 5.30, 3.90, 3.85, 0.08, 0x88ccff, {shadow:false, mat:{transparent:true, opacity:0.34, roughness:0.12, transmission:0.55, ior:1.45, metalness:0}});
+box(-5.15, 2.60, 5.25, 3.70, 3.65, 0.05, 0xFFB15E, {shadow:false, mat:{emissive:0xFFB15E, emissiveIntensity:0.5, transparent:true, opacity:0.15}});
+// Frame: outer face Z=5.95
+box(-5.15, 2.60, 5.95, 4.10, 4.05, 0.12, DARK);
+box(-5.15, 2.60, 5.95, 3.90, 3.85, 0.14, 0x1a1a1a, {shadow:false});  // frame opening
+// Layer B (counter): Z=4.40
+box(-5.15, 1.40, 4.40, 3.40, 0.75, 0.70, 0x6A422C);  // wood counter top
+box(-5.15, 0.70, 4.40, 3.40, 0.70, 0.65, 0xA7ADB0);  // stainless base
+// Layer C (pizza boxes): Z=3.45
+box(-6.15, 1.75, 3.45, 0.85, 0.18, 0.85, 0xE8DDC8, {shadow:false});
+box(-4.55, 1.75, 3.45, 0.85, 0.18, 0.85, 0xE8DDC8, {shadow:false});
+box(-6.15, 1.95, 3.45, 0.85, 0.18, 0.85, 0xE8DDC8, {shadow:false});
+// Layer D (shelf): Z=2.35
+box(-5.15, 2.80, 2.35, 3.20, 2.30, 0.25, 0x6A422C);
+// Layer E (back wall + pendants): Z=1.25
+box(-5.15, 2.60, 1.25, 3.80, 4.00, 0.15, 0xC9BDAA);  // tiled back wall
+// Pendants: (-6.1,-5.15,-4.2), Y=4.15
+box(-6.10, 4.15, 2.80, 0.25, 0.35, 0.25, 0xFFD7AA, {shadow:false, mat:{emissive:0xFFB15E, emissiveIntensity:0.8}});
+box(-5.15, 4.15, 2.80, 0.25, 0.35, 0.25, 0xFFD7AA, {shadow:false, mat:{emissive:0xFFB15E, emissiveIntensity:0.8}});
+box(-4.20, 4.15, 2.80, 0.25, 0.35, 0.25, 0xFFD7AA, {shadow:false, mat:{emissive:0xFFB15E, emissiveIntensity:0.8}});
 
-// Green door — center, recessed
-box(0, 1.9, D/2+0.08, 1.6, 3.8, 0.18, GREEN);
-box(0, 2.5, D/2+0.2, 1.0, 1.4, 0.08, GLASSW, {shadow:false});
-box(0.5, 1.8, D/2+0.24, 0.08, 0.4, 0.06, GOLD, {shadow:false});
-box(0, 0.2, D/2+0.4, 1.8, 0.18, 0.8, 0x9aa0a6);
+// Oven/story window: center (-0.70, 2.60), opening 3.80 W x 3.85 H
+box(-0.70, 2.60, 5.30, 3.80, 3.85, 0.08, 0x88ccff, {shadow:false, mat:{transparent:true, opacity:0.34, roughness:0.12, transmission:0.55, ior:1.45, metalness:0}});
+box(-0.70, 2.60, 5.25, 3.60, 3.65, 0.05, 0xFFB15E, {shadow:false, mat:{emissive:0xFFB15E, emissiveIntensity:0.5, transparent:true, opacity:0.15}});
+box(-0.70, 2.60, 5.95, 4.00, 4.05, 0.12, DARK);
+box(-0.70, 2.60, 5.95, 3.80, 3.85, 0.14, 0x1a1a1a, {shadow:false});
+// Layer B (pickup ledge): Z=4.40
+box(-0.70, 1.40, 4.40, 3.20, 0.55, 0.65, 0x4a3526);
+// Layer C (oven arch): Z=3.45, center (-0.95, 1.80), 2.10 W x 2.00 H
+box(-0.95, 1.80, 3.45, 2.10, 2.00, 0.40, 0x7F432F);  // brick arch
+box(-0.95, 1.60, 3.55, 1.40, 1.20, 0.20, 0xFF8A32, {shadow:false, mat:{emissive:0xFF7A2E, emissiveIntensity:2.2}});  // fire glow
+// Layer D (prep worker + peel rack): Z=2.35
+box(-0.30, 1.40, 2.35, 0.50, 1.20, 0.30, 0x5a4a3a);  // worker silhouette
+box(0.40, 1.60, 2.35, 0.08, 1.80, 0.08, 0x87613C);   // peel handle
+// Layer E (storage shelving): Z=1.25
+box(-0.70, 2.60, 1.25, 3.60, 4.00, 0.15, 0x5a4a3a);
 
-// ===== SIDE WALL (right) — "NEW HAVEN APIZZA" micro-text =====
+// Entrance: center (2.25, 2.10), opening 1.70 W x 3.75 H
+// Recessed door at Z=5.05, frame front Z=5.95
+box(2.25, 2.10, 5.05, 1.60, 3.60, 0.20, GREEN);  // door
+box(2.25, 2.70, 5.05, 1.00, 1.40, 0.08, 0x88ccff, {shadow:false, mat:{transparent:true, opacity:0.34, roughness:0.12}});  // door glass
+box(2.25, 2.10, 5.95, 1.90, 3.95, 0.15, DARK);  // frame
+box(2.25, 2.10, 5.95, 1.70, 3.75, 0.17, 0x1a1a1a, {shadow:false});
+box(2.75, 1.90, 5.12, 0.10, 0.50, 0.08, GOLD, {shadow:false});  // handle
+
+// Pickup wing portal: center (5.75, 2.25), opening 2.70 W x 3.20 H
+// Wing front Z0=4.50
+box(5.75, 2.25, 4.30, 2.70, 3.20, 0.08, 0x88ccff, {shadow:false, mat:{transparent:true, opacity:0.34, roughness:0.12}});
+box(5.75, 2.25, 4.95, 2.90, 3.40, 0.12, DARK);
+// Layer B (shelf): Z=3.55
+box(5.75, 1.40, 3.55, 2.40, 0.50, 0.60, 0x6A422C);
+// Layer C (order boxes): Z=2.85
+box(5.35, 1.70, 2.85, 0.70, 0.50, 0.50, 0xE8DDC8, {shadow:false});
+box(6.15, 1.70, 2.85, 0.70, 0.50, 0.50, 0xE8DDC8, {shadow:false});
+// Layer D (back-lit niche): Z=1.90
+box(5.75, 2.25, 1.90, 2.20, 2.80, 0.12, 0xFFD7AA, {shadow:false, mat:{emissive:0xFFB15E, emissiveIntensity:0.6}});
+
+// Pickup label: center (5.75, 5.02, 4.85), cap height 0.34
+drawName("PICKUP", 4.85, 4.85, 0.048, CREAM, 0.15);
+
+// ===== AWNING =====
+// center (-2.10, 5.25, 6.15), 9.20 W, projects to Z=8.00, top Y=5.85
+// Panel bottom Y=7.25, clear 1.40 u
 {
-  const words=["NEW HAVEN","APIZZA"], s=0.22;
-  words.forEach((word,wi)=>{
-    const tw=glyphCols(word)*s; let cz=-tw/2+0.5;
-    for(const ch of word){
-      const g=F5[ch]; if(!g||!g[0]){cz+=2*s;continue;} const gw=g[0].length;
-      for(let r=0;r<g.length;r++) for(let c=0;c<gw;c++)
-        if(g[r][c]==='1') box(W/2+0.25, 5.5-wi*2.0+(g.length-1-r)*s, cz+c*s, 0.3, s*0.85, s*0.85, CREAM, {shadow:false});
-      cz+=(gw+1.5)*s;
-    }
-  });
-}
-
-// ===== REAR — pickup door + small sign =====
-box(0, 1.2, -D/2-0.1, 2.0, 2.4, 0.2, 0x4a4a4a);
-box(0, 2.8, -D/2-0.2, 2.8, 0.6, 0.15, RED);
-{
-  const word="PICKUP", s=0.12, tw=glyphCols(word)*s; let cx2=-tw/2;
-  for(const ch of word){
-    const g=F5[ch]; const gw=g[0].length;
-    for(let r=0;r<g.length;r++) for(let c=0;c<gw;c++)
-      if(g[r][c]==='1') box(cx2+c*s, 2.56+(g.length-1-r)*s, -D/2-0.28, s*0.85, s*0.85, 0.08, WHITE, {shadow:false});
-    cx2+=(gw+1.5)*s;
+  const aw=9.20, n=10, z=6.15;
+  for(let i=0;i<n;i++){
+    const col=i%2?RED:CREAM, sx=-2.10-aw/2+(i+0.5)*(aw/n);
+    box(sx, 4.85, z+0.90, aw/n*0.98, 0.22, 1.80, col);
+    box(sx, 4.30, z+1.70, aw/n*0.98, 0.85, 0.20, col);
   }
 }
 
-// ===== STREET LIFE — small, deliberate =====
-planter(-W/2-1.2, D/2-0.6, REDD, 0x2f7a3a);
-planter( W/2+1.2, D/2-0.6, REDD, 0x2f7a3a);
-cafeSet(-W/2-3.0, 1.2, RED);
-cafeSet(-W/2-3.2, 4.5, RED);
-minifig(-W/2-3.0, 0.3, RED, 0x2a3a5a);
-minifig(-W/2-4.2, 4.7, 0x2f7a3a, 0x3a3a3a);
-sandwichBoard(-4.0, D/2+3.0, ["HOT","APIZZA"], 0.12, RED, CREAM);
-lampPost(-W/2-5.5, D/2+0.3);
-lampPost( W/2+5.5, D/2+0.3);
-van(W/2+5.5, 0.3, 0xf2ead8, "PATS", RED, 0.85);
-// Pizza hero — small, on pedestal
-box(W/2+2.5, 0.4, D/2+3.5, 2.0, 0.8, 2.0, 0x3a3a3a);
-box(W/2+2.5, 0.9, D/2+3.5, 1.8, 0.25, 1.8, 0xc98a3d);
-box(W/2+2.5, 1.0, D/2+3.5, 1.5, 0.2, 1.5, 0xf2c14e);
-[[-0.4,0.2],[0.3,-0.3],[0.1,0.45],[-0.15,-0.45]].forEach(p=>box(W/2+2.5+p[0], 1.15, D/2+3.5+p[1], 0.25, 0.1, 0.25, 0xc0392b));
+// ===== CONNECTED PROPS =====
+// Cafe set A: center (-10.15, 3.00), table top Y=1.15
+cafeSet(-10.15, 3.00, RED);
+// Cafe set B: center (-10.15, 6.10)
+cafeSet(-10.15, 6.10, RED);
+// Planters: (-8.35, 6.65) and (4.05, 6.65)
+planter(-8.35, 6.65, REDD, 0x2f7a3a);
+planter(4.05, 6.65, REDD, 0x2f7a3a);
+// Entering customer: (1.65, 7.10), facing door
+minifig(1.65, 7.10, RED, 0x2a3a5a);
+// Pickup customer: (5.85, 6.10), facing pickup
+minifig(5.85, 6.10, 0x2f7a3a, 0x3a3a3a);
+// Server carrying box: (-8.90, 4.70), facing patio
+minifig(-8.90, 4.70, RED, 0x2a3a5a);
+// Delivery van: center (9.50, 11.15), length 5.20 parallel to X, curb-side door facing -Z
+van(9.50, 11.15, 0xf2ead8, "PATS", RED, 0.95);
+// Low rail at X=-8.55 (patio edge)
+box(-8.55, 0.45, 4.30, 0.15, 0.90, 6.60, DARK);
+
+// ===== INTERIOR PRACTICAL LIGHTS (emissive, not actual Three.js lights for perf) =====
+// The emissive materials on windows/pendants/oven already provide the glow
+// Additional interior fill via scene cfg lighting override
+
+// Scene-specific lighting for Pat's
+cfg.keyColor = 0xE8F1FF;
+cfg.keyIntensity = 2.20;
+cfg.rimColor = 0xD9472F;  // warm red rim for pizzeria
+cfg.rimIntensity = 0.72;
+cfg.exposure = 1.05;
+cfg.bounceIntensity = 1.25;
 
      };
      buildVoxelScene(mount, CFG);
