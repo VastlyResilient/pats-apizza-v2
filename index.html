@@ -234,6 +234,14 @@ function buildVoxelScene(mount, cfg){
   const matCache = new Map();
   function mat(color, opts){
     const key = color + JSON.stringify(opts||{});
+    // Use MeshBasicMaterial for high-intensity emissive — ignores tone mapping, always full brightness
+    if(opts?.emissiveIntensity && opts.emissiveIntensity >= 2.0) {
+      return new THREE.MeshBasicMaterial({
+        color: opts?.emissive ?? color,
+        transparent: opts?.transparent ?? false,
+        opacity: opts?.opacity ?? 1,
+      });
+    }
     if(matCache.has(key)) return matCache.get(key);
     const m = opts?.transmission ? new THREE.MeshPhysicalMaterial({
       color: color,
@@ -257,8 +265,7 @@ function buildVoxelScene(mount, cfg){
     matCache.set(key, m);
     return m;
   }
-
-  function box(x,y,z, w,h,d, color, opts){
+function box(x,y,z, w,h,d, color, opts){
     const m = new THREE.Mesh(geoBox, mat(color, opts?.mat||{}));
     m.position.set(x,y,z); m.scale.set(w,h,d);
     m.castShadow = opts?.shadow !== false;
@@ -743,6 +750,16 @@ cfg.rimColor = 0xD9472F;  // warm red rim for pizzeria
 cfg.rimIntensity = 0.72;
 cfg.exposure = 1.05;
 cfg.bounceIntensity = 1.25;
+
+
+// ===== INTERIOR PRACTICAL LIGHTS (spec §3: six PointLights #FFB15E) =====
+// These are REAL lights that illuminate the voxel interior and spill warm light through windows
+const _pl1 = new THREE.PointLight(0xFFB15E, 1.8, 6.0, 2); _pl1.position.set(-5.15, 3.4, 3.25); world.add(_pl1);
+const _pl2 = new THREE.PointLight(0xFFB15E, 1.8, 6.0, 2); _pl2.position.set(-0.70, 3.4, 3.25); world.add(_pl2);
+const _pl3 = new THREE.PointLight(0xFFB15E, 1.4, 5.0, 2); _pl3.position.set(5.75, 3.0, 2.50); world.add(_pl3);
+const _plOven = new THREE.PointLight(0xFF7A2E, 2.2, 4.0, 2); _plOven.position.set(-0.95, 1.8, 3.2); world.add(_plOven);
+const _plP1 = new THREE.PointLight(0xFFB15E, 0.7, 3.5, 2); _plP1.position.set(-6.1, 4.15, 2.8); world.add(_plP1);
+const _plP2 = new THREE.PointLight(0xFFB15E, 0.7, 3.5, 2); _plP2.position.set(-4.2, 4.15, 2.8); world.add(_plP2);
 
      };
      buildVoxelScene(mount, CFG);
