@@ -235,7 +235,17 @@ function buildVoxelScene(mount, cfg){
   function mat(color, opts){
     const key = color + JSON.stringify(opts||{});
     if(matCache.has(key)) return matCache.get(key);
-    const m = new THREE.MeshStandardMaterial({
+    const m = opts?.transmission ? new THREE.MeshPhysicalMaterial({
+      color: color,
+      roughness: opts?.roughness ?? 0.82,
+      metalness: opts?.metalness ?? 0,
+      emissive: opts?.emissive ?? 0x000000,
+      emissiveIntensity: opts?.emissiveIntensity ?? 0,
+      transparent: opts?.transparent ?? false,
+      opacity: opts?.opacity ?? 1,
+      transmission: opts?.transmission ?? 0,
+      ior: opts?.ior ?? 1.45,
+    }) : new THREE.MeshStandardMaterial({
       color: color,
       roughness: opts?.roughness ?? 0.82,
       metalness: opts?.metalness ?? 0,
